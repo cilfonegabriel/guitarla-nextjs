@@ -1,10 +1,11 @@
 import Link from "next/link"
+import Layout from "../components/layout"
 
 function Us() {
   return (
-    <div>
+    <Layout>
       <Link href="/">Go to Home</Link>
-    </div>
+    </Layout>
   )
 }
 
