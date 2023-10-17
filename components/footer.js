@@ -1,10 +1,11 @@
 import Link from "next/link"
+import styles from "../styles/footer.module.css"
 
 function Footer() {
   return (
-    <footer>
-        <div className='contenedor'>
-            <nav className="navegacion">
+    <footer className={styles.footer}>
+        <div className={`contenedor ${styles.contenido}`}>
+            <nav className={styles.navegacion}>
                 <Link href="/" >
                     Inicio
                 </Link>
@@ -22,7 +23,7 @@ function Footer() {
                 </Link>
             </nav>
 
-            <p>All rights reserved {new Date().getFullYear()}</p>
+            <p className={styles.copyright}>All rights reserved {new Date().getFullYear()}</p>
         </div>
     </footer>
   )
