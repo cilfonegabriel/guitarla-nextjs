@@ -9,7 +9,7 @@ function Us() {
         description = "About Us, guitaarLa, music store"
     >
       <main className="contenedor">
-        <h2 className="heading">Us</h2>
+        <h1 className="heading">Us</h1>
         <div className={styles.contenido}>
           <Image src="/img/nosotros.jpg" width={1000} height={800} alt="Image about us" />
           <div>
