@@ -1,5 +1,6 @@
 import Layout from "../components/layout"
 import Guitar from "../components/guitar"
+import styles from "../styles/grid.module.css"
 
 export default function Store({guitars}) {
 
@@ -12,13 +13,14 @@ export default function Store({guitars}) {
       <main className="contenedor">
         <h1 className="heading">Our Collection</h1>
 
-        {guitars.map(guitar => (
-          <Guitar 
-            key={guitar.id}
-            guitar={guitar.attributes}
-          />
-        ))}
-
+        <div className={styles.grid}>
+          {guitars.map(guitar => (
+            <Guitar 
+              key={guitar.id}
+              guitar={guitar.attributes}
+            />
+          ))}
+        </div>
       </main>
     </Layout>
   )
