@@ -14,10 +14,8 @@ export default function Guitar({guitar}) {
         <h3>{name}</h3>
         <p className={styles.descripcion}>{description}</p>
         <p className={styles.precio}>${price}</p>
-        <Link legacyBehavior href={`/guitars/${url}`}>
-          <a className={styles.enlace}>
+        <Link className={styles.enlace} href={`/guitars/${url}`}>
             See Product
-          </a>
         </Link>
       </div>
     </div>
