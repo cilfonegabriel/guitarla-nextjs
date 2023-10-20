@@ -9,12 +9,12 @@ function Cart() {
                 Cart
             </h1>
 
-            <div>
-                <div>
+            <div className={styles.contenido}>
+                <div className={styles.carrito}>
                     <h2>Article</h2>
                 </div>
 
-                <aside>
+                <aside className={styles.resumen}>
                     <h3>Order Summary</h3>
                     <p>Total to pay: </p>
                 </aside>

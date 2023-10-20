@@ -18,6 +18,24 @@ export default function Product({guitar}) {
                     <p className={styles.descripcion}>{description}</p>
                     <p className={styles.precio}>${price}</p>
 
+                    <form className={styles.formulario}>
+                        <label htmlFor="cantidad">Amount:</label>
+
+                        <select id="cantidad">
+                            <option value="0">-- Select --</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        
+                        <input 
+                            type="submit"
+                            value="Add to cart" 
+                        />
+                    </form>
+
                 </div>
             </div>
         </Layout>
