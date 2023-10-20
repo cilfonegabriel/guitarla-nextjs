@@ -30,6 +30,10 @@ function Header() {
                     <Link href="/store" className={router.pathname === '/store' ? styles.active : ''}>
                         Store
                     </Link>
+
+                    <Link href="/cart">
+                        <Image width={30} height={25} src="/img/carrito.png" alt='imagen in header'/>
+                    </Link>
                 </nav>
             </div>
         </header>
