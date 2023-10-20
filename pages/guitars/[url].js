@@ -15,6 +15,15 @@ export default function Product({guitar}) {
             alert('Amount not validated')
             return
         }
+
+        const guitarSelected = {
+            id: guitar[0].id,
+            imagen: imagen.data.attributes.url,
+            name,
+            price,
+            amount
+        }
+        console.log(guitarSelected)
     }
 
     return (
