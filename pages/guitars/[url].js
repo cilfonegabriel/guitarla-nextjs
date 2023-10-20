@@ -1,10 +1,21 @@
+import { useState } from 'react'
 import Image from "next/image"
 import styles from "../../styles/guitarras.module.css"
 import Layout from "../../components/layout"
 
 export default function Product({guitar}) {
 
+    const [amount, setAmount] = useState(0)
     const { name, description, imagen, price } = guitar[0].attributes
+
+    const handleSubmit = e => {
+        e.preventDefault()
+
+        if(amount < 1) {
+            alert('Amount not validated')
+            return
+        }
+    }
 
     return (
         <Layout
@@ -18,10 +29,15 @@ export default function Product({guitar}) {
                     <p className={styles.descripcion}>{description}</p>
                     <p className={styles.precio}>${price}</p>
 
-                    <form className={styles.formulario}>
+                    <form 
+                        onSubmit={handleSubmit}
+                        className={styles.formulario}
+                    >
                         <label htmlFor="cantidad">Amount:</label>
 
-                        <select id="cantidad">
+                        <select
+                            onChange={ e => setAmount(+e.target.value)}
+                            id="cantidad">
                             <option value="0">-- Select --</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
