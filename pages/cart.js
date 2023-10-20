@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Image from "next/image"
 import styles from "../styles/cart.module.css"
 
-function Cart({carrito, actualizarCantidad}) {
+function Cart({carrito, actualizarCantidad, eliminarProducto}) {
 
     const [total, setTotal] = useState(0)
 
@@ -53,6 +53,14 @@ function Cart({carrito, actualizarCantidad}) {
                                     <p className={styles.price}>$<span>{product.price}</span></p>
                                     <p className={styles.subtotal}>Subtotal: $<span>{product.amount * product.price}</span></p>
                                 </div>
+
+                                <button
+                                    className={styles.eliminar}
+                                    type="button"
+                                    onClick={() => eliminarProducto(product.id)}
+                                >
+                                    X
+                                </button>
                             </div>
                         ))
 
