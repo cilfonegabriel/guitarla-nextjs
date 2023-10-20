@@ -3,7 +3,7 @@ import Image from "next/image"
 import styles from "../../styles/guitarras.module.css"
 import Layout from "../../components/layout"
 
-export default function Product({guitar}) {
+export default function Product({guitar, agregarCarrito}) {
 
     const [amount, setAmount] = useState(0)
     const { name, description, imagen, price } = guitar[0].attributes
@@ -23,7 +23,8 @@ export default function Product({guitar}) {
             price,
             amount
         }
-        console.log(guitarSelected)
+        
+        agregarCarrito(guitarSelected)
     }
 
     return (
