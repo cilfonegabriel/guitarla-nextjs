@@ -23,7 +23,8 @@ function Cart({carrito}) {
                                 </div>
 
                                 <div>
-                                    <p className={styles.name}>{product.name}</p>
+                                    <p className={styles.nombre}>{product.name}</p>
+                                    <p>Amount: {product.amount}</p>
                                     <p className={styles.price}>$<span>{product.price}</span></p>
                                     <p className={styles.subtotal}>Subtotal: $<span>{product.amount * product.price}</span></p>
                                 </div>
