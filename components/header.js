@@ -32,7 +32,7 @@ function Header() {
                     </Link>
 
                     <Link href="/cart">
-                        <Image width={30} height={25} src="/img/carrito.png" />
+                        <Image width={30} height={25} src="/img/carrito.png" alt='imagen in header'/>
                     </Link>
                 </nav>
             </div>
