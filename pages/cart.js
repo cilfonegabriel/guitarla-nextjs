@@ -2,7 +2,7 @@ import Layout from "../components/layout"
 import styles from "../styles/cart.module.css"
 import Image from "next/image"
 
-function Cart({carrito}) {
+function Cart({carrito, actualizarCantidad}) {
   return (
     <Layout title="Shopping cart">
         <main className="contenedor">
@@ -24,7 +24,23 @@ function Cart({carrito}) {
 
                                 <div>
                                     <p className={styles.nombre}>{product.name}</p>
-                                    <p>Amount: {product.amount}</p>
+                                    <div className={styles.cantidad}>
+                                        <p>Amount:</p>
+                                        <select
+                                            className={styles.select}
+                                            onChange={ e => actualizarCantidad({
+                                                id: product.id,
+                                                amount: e.target.value
+                                            })}
+                                            value={product.amount}
+                                        >
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
                                     <p className={styles.price}>$<span>{product.price}</span></p>
                                     <p className={styles.subtotal}>Subtotal: $<span>{product.amount * product.price}</span></p>
                                 </div>
