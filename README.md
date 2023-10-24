@@ -31,7 +31,7 @@
 
 # 📖 About the Project <a name="about-project"></a>
 
-**Online Guitar Store** This web application is an online store for purchasing guitars. It's built using Remix on the front-end and Strapi on the back-end. The project focuses on providing a seamless user experience with dynamic routes, a shopping cart system, a blog, and efficient media handling with Cloudinary. Additionally, it utilizes a PostgreSQL database for robust product management.
+**Online Guitar Store** This web application is an online store for purchasing guitars. It's built using Next Js on the front-end and Strapi on the back-end. The project focuses on providing a seamless user experience with dynamic routes, a shopping cart system, a blog, and efficient media handling with Cloudinary. Additionally, it utilizes a PostgreSQL database for robust product management.
 
 🎸 This app was created as part of the course "React - The Complete Guide: Hooks Context Redux MERN +15 Apps"! 
 
