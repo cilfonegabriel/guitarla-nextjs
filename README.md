@@ -1,6 +1,6 @@
 <div align="center">
   
-  <h3><b>GuitarLA - Remix</b></h3>
+  <h3><b>GuitarLA - Next JS</b></h3>
 
   <img src="Captura.png" alt="logo" height="auto" />
 
